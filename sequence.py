@@ -11,9 +11,15 @@ class Sequence:
     def set_time():
         length_time = (60 * 4 * length_bars) / BPM
         
-    def set_bars():
+    # def set_bars():
         # length_bars = ()
-        pass
+        # pass
+
+    def set_bars():
+        length_bars = 0
+        for pattern in patterns:
+            length_bars += pattern.length_bars
+            
     
     def __init__(self, patterns, name, BPM):
         # self.waves_dir = waves_dir
@@ -22,3 +28,6 @@ class Sequence:
         self.BPM = BPM
         set_time()
         set_bars()
+
+    def __init__(self):
+        self = self
